@@ -48,8 +48,3 @@ for i in range(len(auxilary_stack) - 1):
             print('the elements are consecutive')
 '''
 
-def pairwise_consecutive(stack):
-    aux = []
-    while(len(stack) != 0):
-        aux.append(stack[-1])
-        stack.pop()
