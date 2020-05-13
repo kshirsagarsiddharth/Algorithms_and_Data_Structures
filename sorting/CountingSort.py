@@ -12,7 +12,6 @@ def count_sort_method_one(array):
     for i in range(n - 1,-1,-1):
         output[count[array[i]] - 1] = array[i]
         count[array[i]] -= 1
-    %
     for i in range(0,n):
         array[i] = output[i]
     

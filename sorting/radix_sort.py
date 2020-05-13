@@ -13,7 +13,7 @@ def countint_sort(array,place):
         index = array[i] // place
         count[index % 10] += 1
     
-    for i in range(0,25):
+    for i in range(1,25):
         count[i] += count[i - 1]
     
     for i in range(size - 1,-1,-1):

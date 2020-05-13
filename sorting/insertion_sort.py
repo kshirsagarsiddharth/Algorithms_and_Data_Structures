@@ -5,7 +5,7 @@ def insertion_sort(array):
         j = step - 1
 
         while j >= 0 and array[j] > key:
-            array[j + 1] == array[j]
+            array[j + 1] = array[j]
             j = j - 1
 
         array[j + 1] = key 
