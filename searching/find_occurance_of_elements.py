@@ -59,3 +59,40 @@ def find_count_three(array,n,x):
 
     return first_occ - last_occ + 1
 
+
+def binary_search(array,n,x):
+    """
+        over here array is the input array n is the array length and x is the element to be searched
+    """
+
+    low,high = 0,n - 1
+    while low <= high:
+        mid = low + ((high - low) // 2)
+        if x == array[mid]:
+            return mid
+        elif x > array[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
+        
+    return -1
+
+def count_occurance(array,n,x):
+    index = binary_search(array,n,x)
+
+    if index == -1:
+        return False
+    
+    count = 1
+    left = index - 1
+    while left >= 0 and array[left] == x:
+        count += 1
+        left -= 1
+    
+    right = index + 1
+    while right < n and array[right] == x:
+        count += 1
+        right += 1
+    
+    return count
+
